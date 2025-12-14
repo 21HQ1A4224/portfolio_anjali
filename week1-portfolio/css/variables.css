@@ -1,0 +1,12 @@
+/* CSS VARIABLES */
+:root {
+    --primary-color: #2563eb;       /* Modern Blue */
+    --primary-dark: #1e40af;        /* Darker Blue for hover */
+    --secondary-color: #1e293b;     /* Dark Slate */
+    --text-color: #334155;          /* Slate Gray */
+    --bg-light: #f8fafc;            /* Very light gray */
+    --white: #ffffff;
+    --transition-speed: 0.3s;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

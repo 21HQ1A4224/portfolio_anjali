@@ -1,0 +1,127 @@
+/* RESPONSIVE DESIGN - Mobile First Approach */
+
+/* Tablet & Smaller Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .container { 
+        padding: 0 30px; 
+    }
+    
+    .hero-content h1 { 
+        font-size: 3rem; 
+    }
+    
+    .contact-wrapper { 
+        gap: 2rem; 
+    }
+    
+    .grid-layout {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Hamburger Menu Logic */
+    .hamburger { 
+        display: block; 
+    }
+    
+    .hamburger.active .bar:nth-child(2) { 
+        opacity: 0; 
+    }
+    
+    .hamburger.active .bar:nth-child(1) { 
+        transform: translateY(8px) rotate(45deg); 
+    }
+    
+    .hamburger.active .bar:nth-child(3) { 
+        transform: translateY(-8px) rotate(-45deg); 
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .nav-links.active { 
+        left: 0; 
+    }
+
+    .nav-link {
+        display: block;
+        padding: 20px 0;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    /* Layout Adjustments */
+    .hero-content h1 { 
+        font-size: 2.2rem; 
+    }
+    
+    .hero-role {
+        font-size: 1.2rem;
+    }
+    
+    .hero-desc { 
+        font-size: 1rem; 
+    }
+    
+    .cta-buttons { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    .btn { 
+        width: 100%; 
+        margin: 0; 
+    }
+    
+    .contact-wrapper { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .contact-info { 
+        margin-bottom: 30px; 
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-content h1 { 
+        font-size: 1.8rem; 
+    }
+    
+    .hero-role {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .contact-form {
+        padding: 2rem;
+    }
+}
