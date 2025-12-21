@@ -1,0 +1,43 @@
+# Documentation: Tools and Capabilities
+
+## Overview
+This document provides comprehensive documentation about the tools, capabilities, and workflow for accomplishing tasks in this environment.
+
+## Available Tools
+
+### 1. execute_command
+**Description**: Execute CLI commands on the user's system
+**Parameters**:
+- command: (required) The CLI command to execute
+- requires_approval: (required) Boolean indicating if explicit user approval is needed
+**Usage**:
+```xml
+<execute_command>
+<command>npm install</command>
+<requires_approval>false</requires_approval>
+</execute_command>
+```
+
+### 2. read_file
+**Description**: Read contents of a file
+**Parameters**:
+- path: (required) File path relative to current working directory
+- task_progress: (optional) Progress checklist
+**Usage**:
+```xml
+<read_file>
+<path>src/index.js</path>
+</read_file>
+```
+
+### 3. write_to_file
+**Description**: Create new file or overwrite existing file
+**Parameters**:
+- path: (required) File path
+- content: (required) Complete file content
+- task_progress: (optional) Progress checklist
+**Usage**:
+```xml
+<write_to_file>
+<path>config.json</path>
+<content>{"apiKey": "12345"}
